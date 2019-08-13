@@ -1,5 +1,7 @@
 package springboot.demo.test.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import springboot.demo.test.entity.User;
@@ -42,5 +44,11 @@ public class UserImpl implements UserService {
     @Override
     public void delete(Long id) {
         userMapper.delete(id);
+    }
+
+    @Override
+    public Page<User> findByPage(int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo, pageSize);
+        return (Page<User>) userMapper.findByPage();
     }
 }

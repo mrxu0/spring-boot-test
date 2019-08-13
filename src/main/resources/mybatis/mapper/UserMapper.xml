@@ -18,6 +18,12 @@
         FROM users
     </select>
 
+    <select id="findByPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from users
+    </select>
+
     <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >
         SELECT
         <include refid="Base_Column_List" />

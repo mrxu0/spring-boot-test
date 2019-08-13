@@ -1,14 +1,16 @@
 package springboot.demo.test.controller;
 
+import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import springboot.demo.test.entity.User;
-import springboot.demo.test.mapper.UserMapper;
 import springboot.demo.test.service.UserService;
+import springboot.demo.utils.PageInfo;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -40,7 +42,6 @@ public class UserController {
         return "成功";
     }
 
-//    @RequestMapping("/update/{id}")
     @RequestMapping(value="/update", method = RequestMethod.POST)
     public String update(@Valid Long id, @Valid String name, @Valid String pass) {
         User user = new User();
@@ -49,5 +50,12 @@ public class UserController {
         user.setPassWord(pass);
         userService.update(user);
         return "成功";
+    }
+
+    @RequestMapping(value="/findByPage/{pageNo}/{pageSize}", method = RequestMethod.GET)
+    public PageInfo<User> findByPage(@PathVariable int pageNo, @PathVariable int pageSize) {
+        Page<User> userList = userService.findByPage(pageNo, pageSize);
+        PageInfo<User> pageInfo = new PageInfo<User>(userList);
+        return pageInfo;
     }
 }

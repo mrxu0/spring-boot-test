@@ -15,5 +15,7 @@ public interface UserMapper {
 
     void delete(Long id);
 
+    List<User>  findByPage();
+
 }
 
