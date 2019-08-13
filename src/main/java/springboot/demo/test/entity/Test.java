@@ -1,4 +1,4 @@
-package springboot.demo.test.dao;
+package springboot.demo.test.entity;
 
 import java.util.Date;
 

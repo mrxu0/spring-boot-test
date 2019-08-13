@@ -2,18 +2,18 @@ package springboot.demo.test.entity;
 
 import java.io.Serializable;
 
-public class UserEntity implements Serializable {
+public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
     private String userName;
     private String passWord;
     private String nickName;
-    public UserEntity() {
+    public User() {
         super();
     }
 
-    public UserEntity(String userName, String passWord) {
+    public User(String userName, String passWord) {
         super();
         this.passWord = passWord;
         this.userName = userName;

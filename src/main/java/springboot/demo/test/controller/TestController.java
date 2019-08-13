@@ -2,7 +2,7 @@ package springboot.demo.test.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springboot.demo.test.dao.Test;
+import springboot.demo.test.entity.Test;
 
 import java.util.Date;
 
