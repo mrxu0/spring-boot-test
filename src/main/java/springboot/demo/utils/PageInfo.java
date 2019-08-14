@@ -1,6 +1,7 @@
 package springboot.demo.utils;
 
 import com.github.pagehelper.Page;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -8,19 +9,19 @@ import java.util.List;
 
 public class PageInfo<T> implements Serializable {
     private static final long serialVersionUID = 1L;
-    //当前页
+    @ApiModelProperty("当前页")
     private int pageNum;
-    //每页的数量
+    @ApiModelProperty("每页的数量")
     private int pageSize;
-    //总记录数
+    @ApiModelProperty("总记录数")
     private long total;
-    //总页数
+    @ApiModelProperty("总页数")
     private int pages;
-    //结果集
+    @ApiModelProperty("结果集")
     private List<T> list;
-    //是否为第一页
+    @ApiModelProperty("是否为第一页")
     private boolean isFirstPage = false;
-    //是否为最后一页
+    @ApiModelProperty("是否为最后一页")
     private boolean isLastPage = false;
 
 

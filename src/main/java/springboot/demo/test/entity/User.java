@@ -1,13 +1,19 @@
 package springboot.demo.test.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("用户id")
     private Long id;
+    @ApiModelProperty("真实姓名")
     private String userName;
+    @ApiModelProperty("密码")
     private String passWord;
+    @ApiModelProperty("网名")
     private String nickName;
     public User() {
         super();
