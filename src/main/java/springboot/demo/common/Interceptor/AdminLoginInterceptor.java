@@ -26,7 +26,7 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
 //            不存在则跳转到登录页
 //            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/login/adminLogin");
 //            httpServletResponse.getWriter().println(new Response<>());
-            return false;
+            return true;
         }
     }
 

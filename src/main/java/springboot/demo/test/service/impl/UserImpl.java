@@ -1,5 +1,6 @@
 package springboot.demo.test.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import springboot.demo.utils.RandomString;
 import java.util.List;
 
 @Service
-public class UserImpl implements UserService {
+public class UserImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Autowired
     private UserMapper userMapper;

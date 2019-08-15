@@ -89,6 +89,17 @@
                 </configuration>
             </plugin>
         </plugins>
+
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/java</directory>-->
+<!--                <includes>-->
+<!--                    <include>mybatis/mapper/*.xml</include>-->
+<!--                </includes>-->
+<!--                &lt;!&ndash; 是否替换资源中的属性&ndash;&gt;-->
+<!--                <filtering>false</filtering>-->
+<!--            </resource>-->
+<!--        </resources>-->
     </build>
 
 </project>
