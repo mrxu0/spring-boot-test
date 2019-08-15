@@ -1,12 +1,14 @@
-package springboot.demo.utils;
+package springboot.demo.common;
 
 import com.github.pagehelper.Page;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
+@Data
 public class PageInfo<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("当前页")
@@ -61,76 +63,5 @@ public class PageInfo<T> implements Serializable {
     private void judgePageBoudary() {
         isFirstPage = pageNum == 1;
         isLastPage = pageNum == pages;
-    }
-
-    public int getPageNum() {
-        return pageNum;
-    }
-
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
-    }
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public long getTotal() {
-        return total;
-    }
-
-    public void setTotal(long total) {
-        this.total = total;
-    }
-
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
-    public List<T> getList() {
-        return list;
-    }
-
-    public void setList(List<T> list) {
-        this.list = list;
-    }
-
-    public boolean isIsFirstPage() {
-        return isFirstPage;
-    }
-
-    public void setIsFirstPage(boolean isFirstPage) {
-        this.isFirstPage = isFirstPage;
-    }
-
-    public boolean isIsLastPage() {
-        return isLastPage;
-    }
-
-    public void setIsLastPage(boolean isLastPage) {
-        this.isLastPage = isLastPage;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("PageInfo{");
-        sb.append("pageNum=").append(pageNum);
-        sb.append(", pageSize=").append(pageSize);
-        sb.append(", total=").append(total);
-        sb.append(", pages=").append(pages);
-        sb.append(", list=").append(list);
-        sb.append(", isFirstPage=").append(isFirstPage);
-        sb.append(", isLastPage=").append(isLastPage);
-        sb.append(", navigatepageNums=");
-        sb.append('}');
-        return sb.toString();
     }
 }
