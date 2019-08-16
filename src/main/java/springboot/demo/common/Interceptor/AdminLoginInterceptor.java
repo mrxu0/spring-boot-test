@@ -24,8 +24,6 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
             return true;
         }else{
 //            不存在则跳转到登录页
-//            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/login/adminLogin");
-//            httpServletResponse.getWriter().println(new Response<>());
             return true;
         }
     }
@@ -33,12 +31,10 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
     //    试图渲染之后执行
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-
     }
 
     //    在请求处理之后,视图渲染之前执行
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-
     }
 }

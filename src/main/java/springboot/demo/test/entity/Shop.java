@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+@TableName("shops")
 @Data
 public class Shop implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -13,4 +14,5 @@ public class Shop implements Serializable {
     private String name;
     private Integer price;
     private String des;
+    private String[] content;
 }

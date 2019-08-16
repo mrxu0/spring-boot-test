@@ -8,8 +8,5 @@ import springboot.demo.test.entity.User;
 import java.util.List;
 
 @Component
-public interface OrderMapper extends BaseMapper<Order> {
-
-    List<Order> getAll();
-}
+public interface OrderMapper extends BaseMapper<Order> { }
 

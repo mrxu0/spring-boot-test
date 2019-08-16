@@ -8,5 +8,4 @@ import springboot.demo.test.entity.User;
 import java.util.List;
 
 public interface OrderService extends IService<Order> {
-    List<Order> getAll ();
 }
